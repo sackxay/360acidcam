@@ -27,12 +27,6 @@
         <td style="width:300px; height:300px">
             <img alt="" src="" id="product1"  />
         </td>
-        <td style="width:300px; height:300px">
-            <img alt="" src="" id="product2" />
-        </td>
-        <td style="width:300px; height:300px">
-            <img alt="" src="" id="product3" />
-        </td>
     </tr>
 </table>
     <div id="dvImages" style="display: none" style="width:100%">
@@ -125,7 +119,7 @@
             });
 
             //Set the first image URL as source for the Product.
-            $("#product1, #product2, #product3").attr("src", arr[0]);
+            $("#product1").attr("src", arr[0]);
 
             //Click mode.
             $("#product1").threesixty({ images: arr,
@@ -133,18 +127,6 @@
                 sensibility: 1
             });
 
-            //MouseMove mode.
-            $("#product2").threesixty({ images: arr,
-                method: 'mousemove',
-                sensibility: 1
-            });
-
-            //Automatic mode.
-            $("#product3").threesixty({ images: arr,
-                method: 'auto',
-                direction: 'forward',
-                autoscrollspeed: 100
-            });
             setTimeout(function(){
             $(".progressBg").hide();
             $(".overlay").hide();
